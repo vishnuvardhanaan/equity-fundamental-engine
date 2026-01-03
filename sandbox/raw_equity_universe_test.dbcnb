@@ -1,0 +1,28 @@
+cells:
+  - kind: 2
+    languageId: sql
+    value: "CREATE TABLE raw_equity_universe_backup AS\r
+
+      SELECT *\r
+
+      FROM raw_equity_universe\r
+
+      WHERE symbol IN (\r
+
+      \    'RELIANCE',\r
+
+      \    'ONGC',\r
+
+      \    'TCS',\r
+
+      \    'HDFCBANK',\r
+
+      \    'ITC'\r
+
+      );\r\n"
+    metadata: {}
+metadata:
+  conn:
+    id: 1d58d70d453e9136
+    name: nse_equity_universe.db
+  database: main
