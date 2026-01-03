@@ -4,14 +4,12 @@ import tkinter as tk
 from tkinter import ttk
 
 # IMPORT YOUR PIPELINE STEPS
-import fetch_equity_info
-import fetch_equity_statements
-import fetch_equity_universe
+from equity_pipeline.ingestion import equity_info, equity_statements, equity_universe
 
 PIPELINE_STEPS = [
-    ("Equity Universe", fetch_equity_universe.main),
-    ("Equity Info", fetch_equity_info.main),
-    ("Equity Statements", fetch_equity_statements.main),
+    ("Equity Universe", equity_universe.main),
+    ("Equity Info", equity_info.main),
+    ("Equity Statements", equity_statements.main),
 ]
 
 

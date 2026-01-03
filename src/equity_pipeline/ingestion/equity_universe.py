@@ -1,44 +1,19 @@
 import logging
 import sqlite3
-import sys
 from datetime import datetime
 from io import StringIO
-from pathlib import Path
 from typing import Set
 
 import pandas as pd
 import requests
 
+from equity_pipeline.paths import DB_PATH
+
 # -----------------------------
 # CONFIG
 # -----------------------------
 
-
-def project_root() -> Path:
-    """
-    Resolves the project root directory.
-
-    Expected layout:
-        project_root/
-            data/
-            src/
-                dist/
-                    app.exe
-    """
-    if getattr(sys, "frozen", False):
-        # exe -> dist -> src -> project_root
-        return Path(sys.executable).resolve().parents[2]
-    else:
-        # running from source: src/*.py -> project_root
-        return Path(__file__).resolve().parents[1]
-
-
 NSE_CSV_URL = "https://nsearchives.nseindia.com/content/equities/EQUITY_L.csv"
-
-BASE_DIR = project_root()
-DATA_DIR = BASE_DIR / "data"
-DATA_DIR.mkdir(exist_ok=True)
-DB_PATH = DATA_DIR / "nse_equity_universe.db"
 
 MIN_EXPECTED_ROWS = 1000
 REQUEST_TIMEOUT = 20
@@ -238,6 +213,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
-    main()
     main()

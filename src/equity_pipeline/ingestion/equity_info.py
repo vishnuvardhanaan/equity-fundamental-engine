@@ -3,42 +3,17 @@ import logging
 import random
 import re
 import sqlite3
-import sys
 import time
 from datetime import datetime, timezone
-from pathlib import Path
 from typing import Dict, Tuple
 
 import yfinance as yf
 
+from equity_pipeline.paths import DB_PATH
+
 # =====================================================
 # CONFIG
 # =====================================================
-
-
-def project_root() -> Path:
-    """
-    Resolves the project root directory.
-
-    Expected layout:
-        project_root/
-            data/
-            src/
-                dist/
-                    app.exe
-    """
-    if getattr(sys, "frozen", False):
-        # exe -> dist -> src -> project_root
-        return Path(sys.executable).resolve().parents[2]
-    else:
-        # running from source: src/*.py -> project_root
-        return Path(__file__).resolve().parents[1]
-
-
-BASE_DIR = project_root()
-DATA_DIR = BASE_DIR / "data"
-DATA_DIR.mkdir(exist_ok=True)
-DB_PATH = DATA_DIR / "nse_equity_universe.db"
 
 SOURCE = "Yahoo Finance"
 
@@ -57,7 +32,7 @@ LOG_LEVEL = logging.INFO
 # =====================================================
 
 logging.basicConfig(level=LOG_LEVEL, format="%(asctime)s | %(levelname)s | %(message)s")
-logger = logging.getLogger("fetch_equity_info")
+logger = logging.getLogger(__name__)
 
 # =====================================================
 # FIELD CONFIGURATION
@@ -392,4 +367,5 @@ def main():
 
 
 if __name__ == "__main__":
+    main()
     main()
