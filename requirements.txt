@@ -5,7 +5,7 @@ cffi==2.0.0
 charset-normalizer==3.4.4
 curl_cffi==0.13.0
 dateutils==0.6.12
-# Editable Git install with no remote (equity-pipeline==0.1.0)
+-e git+https://github.com/vishnuvardhanaan/equity-fundamental-engine.git@ee13279befed08604c9574d0f295ed3ab7fbaeb4#egg=equity_pipeline
 et_xmlfile==2.0.0
 frozendict==2.4.7
 idna==3.11
