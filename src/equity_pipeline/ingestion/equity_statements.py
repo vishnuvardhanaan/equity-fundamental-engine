@@ -15,7 +15,7 @@ from equity_pipeline.paths import DB_PATH
 # =====================================================
 
 SOURCE = "Yahoo Finance"
-SLEEP_RANGE = (1.5, 4.5)
+SLEEP_RANGE = (3, 7)
 
 STATEMENTS = [
     ("raw_stock_balancesheet", lambda t: t.get_balance_sheet()),
@@ -75,7 +75,7 @@ def bootstrap_database(conn: sqlite3.Connection) -> None:
 
 
 def fetch_symbols(conn: sqlite3.Connection) -> list[str]:
-    rows = conn.execute("SELECT SYMBOL FROM raw_equity_universe_backup").fetchall()
+    rows = conn.execute("SELECT SYMBOL FROM raw_equity_universe").fetchall()
     return [r[0].strip().upper() for r in rows]
 
 
@@ -320,5 +320,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
     main()
