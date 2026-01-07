@@ -17,7 +17,7 @@ from equity_pipeline.paths import DB_PATH
 
 SOURCE = "Yahoo Finance"
 
-FETCH_SLEEP_RANGE = (3, 7)
+FETCH_SLEEP_RANGE = (0.3, 0.7)
 MAX_RETRIES = 3
 RETRY_BACKOFF = 2.0
 
@@ -217,7 +217,7 @@ def to_yahoo_symbol(symbol: str) -> str:
 
 
 def fetch_symbols(conn: sqlite3.Connection):
-    return [r[0] for r in conn.execute("SELECT symbol FROM raw_equity_universe")]
+    return [r[0] for r in conn.execute("SELECT SYMBOL FROM raw_equity_universe")]
 
 
 def fetch_info_with_retries(symbol: str) -> dict | None:

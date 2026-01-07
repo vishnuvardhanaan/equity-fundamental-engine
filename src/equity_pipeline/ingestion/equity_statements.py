@@ -15,7 +15,7 @@ from equity_pipeline.paths import DB_PATH
 # =====================================================
 
 SOURCE = "Yahoo Finance"
-SLEEP_RANGE = (3, 7)
+SLEEP_RANGE = (0.3, 0.7)
 
 STATEMENTS = [
     ("raw_stock_balancesheet", lambda t: t.get_balance_sheet()),
