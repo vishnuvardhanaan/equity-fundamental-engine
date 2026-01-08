@@ -19,5 +19,5 @@ BASE_DIR = project_root()
 DATA_DIR = BASE_DIR / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
-DB_PATH = DATA_DIR / "nse_equity_universe.db"
+DB_PATH = DATA_DIR / "nse_equity_universe_bronze.db"
 DB_PATH_SAMPLE = DATA_DIR / "nse_equity_universe_sample.db"
