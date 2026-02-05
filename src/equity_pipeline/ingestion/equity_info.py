@@ -17,7 +17,7 @@ from equity_pipeline.paths import DB_PATH
 
 SOURCE = "Yahoo Finance"
 
-FETCH_SLEEP_RANGE = (0.3, 0.7)
+FETCH_SLEEP_RANGE = (3, 7)
 MAX_RETRIES = 3
 RETRY_BACKOFF = 2.0
 
