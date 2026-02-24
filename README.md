@@ -68,6 +68,8 @@ Meanwhile, analysts and BI developers require:
 
 **Equity Depot** addresses this gap by transforming API-level financial data into a **structured relational warehouse optimized for analytics consumption**.
 
+---
+
 ### 🎯 PROJECT OBJECTIVE
 
 To design and implement a **reproducible data pipeline** that:
@@ -77,6 +79,8 @@ To design and implement a **reproducible data pipeline** that:
 - Stores structured datasets in SQLite
 - Enables scalable SQL-based analytics
 - Serves as a foundation layer for advanced scoring engines and BI dashboards
+
+---
 
 ### 📊 DATA SOURCES
 
@@ -105,9 +109,13 @@ The pipeline ingests and structures the following datasets:
   - Income Statement
   - Cash Flow Statement
 
+---
+
 ### 🏗️ SYSTEM ARCHITECTURE
 
 ![alt text](<Equity Depot Architecture.png>)
+
+---
 
 ### 🖼️ SAMPLE DATABASE VIEWS
 
@@ -117,6 +125,10 @@ Below are representative snapshots from the structured equity warehouse.
 
 <p align="center">
   <img src="screenshots/sample_2 (Stock List).png" width="85%">
+</p>
+
+<p align="center">
+  <img src="screenshots/sample_5 (Stock List DB View).png" width="85%">
 </p>
 
 ---
@@ -138,6 +150,10 @@ Below are representative snapshots from the structured equity warehouse.
 ---
 
 #### 📑 Financial Statements
+
+<p align="center">
+  <img src="screenshots/sample_4 (Financial Statements).png" width="85%">
+</p>
 
 <p align="center">
   <img src="screenshots/sample_8 (Financial Statements_Balance Sheet DB View).png" width="85%">
@@ -163,6 +179,8 @@ Below are representative snapshots from the structured equity warehouse.
   <img src="screenshots/sample_12 (Financial Statements Log DB View).png" width="85%">
 </p>
 
+---
+
 ### 🗄️ DATABASE DESIGN
 
 The project implements a **normalized relational schema** covering:
@@ -182,6 +200,8 @@ The database is designed to support:
 - Seamless integration with BI tools
 - Downstream scoring logic (Phase 2)
 
+---
+
 ### ⚙️ AUTOMATION LAYER
 
 Python-based ingestion scripts are designed to:
@@ -193,6 +213,8 @@ Python-based ingestion scripts are designed to:
 - Allow scalable expansion of the equity universe
 
 The ingestion workflow is built to be **reproducible, modular, and extensible**, aligning with real-world analytics engineering practices.
+
+---
 
 ### 🧰 TECH STACK
 
@@ -207,6 +229,8 @@ The ingestion workflow is built to be **reproducible, modular, and extensible**,
 
 - Yahoo Finance API
 - NSE data endpoints
+
+---
 
 ### 📁 FOLDER STRUCTURE
 
@@ -267,6 +291,8 @@ Equity-Depot/
 └── LICENSE
 ```
 
+---
+
 ### 🔎 SAMPLE ANALYTICAL CAPABILITIES ENABLED
 
 Once structured, the database supports analytical queries such as:
@@ -285,6 +311,8 @@ This foundation enables a reusable financial data layer for:
 - Factor modeling workflows
 - Quantitative scoring engines
 - Financial research and screening workflows
+
+---
 
 ### ▶️ HOW TO RUN
 
@@ -319,6 +347,8 @@ python scripts/run_pipeline.py
 
 Upon successful execution, the SQLite database **nse_equity_universe_bronze.db** will be automatically generated inside the data/ directory.
 
+---
+
 ### 🧭 DESIGN PHILOSOPHY
 
 This project intentionally separates concerns across the analytics stack:
@@ -334,6 +364,8 @@ This modular architecture mirrors real-world production systems where:
 - Storage is schema-controlled and governed
 - Downstream logic builds on stable data foundations
 
+---
+
 ### 🧩 ENTITY RELATIONSHIP DIAGRAM
 
 The database is structured using a modular relational design where each domain (profile, market metrics, ownership) is separated and linked through a common equity identifier (`symbol`).
@@ -346,6 +378,8 @@ This structure enables:
 - Query optimization
 - Downstream feature engineering
 - Future extensibility for scoring engines
+
+---
 
 ### 🌍 WHY THIS MATTERS
 
@@ -367,6 +401,8 @@ In real-world finance teams:
 
 This project reflects how financial institutions and analytics teams architect data pipelines **before** applying scoring, modeling, or visualization layers.
 
+---
+
 ### 📌 PROJECT IMPACT
 
 **This project demonstrates proficiency in:**
@@ -384,6 +420,8 @@ This project reflects how financial institutions and analytics teams architect d
 - BI Developer
 - Financial Data Analyst
 - Financial Data Scientist
+
+---
 
 ### 👤 AUTHOR
 
