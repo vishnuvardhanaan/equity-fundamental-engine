@@ -406,7 +406,7 @@ If you found this project useful, consider giving it a ⭐ on GitHub — it help
 
 MIT License
 
-Copyright (c) 2026 Vishnu Vardhanaan S
+Copyright (c) 2025 Vishnu Vardhanaan S
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
