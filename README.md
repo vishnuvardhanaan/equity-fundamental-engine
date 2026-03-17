@@ -27,7 +27,7 @@
 
 ---
 
-### 🚀 OVERVIEW
+### OVERVIEW
 
 <div align="justify">
 
@@ -37,7 +37,7 @@ The system is designed to serve as a **robust data backbone** for scalable finan
 
 ---
 
-### 🎯 PROJECT PURPOSE
+### PROJECT PURPOSE
 
 This project focuses on building the **foundational data layer** required for institutional-grade equity analytics systems. Instead of jumping directly to dashboards, Equity Depot emphasizes:
 
@@ -50,7 +50,7 @@ Think of it as the **data warehouse layer for equity fundamentals**.
 
 ---
 
-### 💼 BUSINESS PROBLEM
+### BUSINESS PROBLEM
 
 Raw financial data obtained from public APIs is typically:
 
@@ -70,7 +70,7 @@ Meanwhile, analysts and BI developers require:
 
 ---
 
-### 🎯 PROJECT OBJECTIVE
+### PROJECT OBJECTIVE
 
 To design and implement a **reproducible data pipeline** that:
 
@@ -82,7 +82,7 @@ To design and implement a **reproducible data pipeline** that:
 
 ---
 
-### 📊 DATA SOURCES
+### DATA SOURCES
 
 **Primary Sources**
 
@@ -111,17 +111,17 @@ The pipeline ingests and structures the following datasets:
 
 ---
 
-### 🏗️ SYSTEM ARCHITECTURE
+### SYSTEM ARCHITECTURE
 
 ![alt text](<Equity Depot Architecture.png>)
 
 ---
 
-### 🖼️ SAMPLE DATABASE VIEWS
+### SAMPLE DATABASE VIEWS
 
 Below are representative snapshots from the structured equity warehouse.
 
-#### 📊 Equity Universe
+#### Equity Universe
 
 <p align="center">
   <img src="screenshots/sample_2 (Stock List).png" width="85%">
@@ -133,7 +133,7 @@ Below are representative snapshots from the structured equity warehouse.
 
 ---
 
-#### 🏢 Company Information
+#### Company Information
 
 <p align="center">
   <img src="screenshots/sample_3 (Stock Information).png" width="85%">
@@ -149,7 +149,7 @@ Below are representative snapshots from the structured equity warehouse.
 
 ---
 
-#### 📑 Financial Statements
+#### Financial Statements
 
 <p align="center">
   <img src="screenshots/sample_4 (Financial Statements).png" width="85%">
@@ -169,7 +169,7 @@ Below are representative snapshots from the structured equity warehouse.
 
 ---
 
-#### 🧾 Pipeline Logging
+#### Pipeline Logging
 
 <p align="center">
   <img src="screenshots/sample_11 (Stock Information Log DB View).png" width="85%">
@@ -181,7 +181,7 @@ Below are representative snapshots from the structured equity warehouse.
 
 ---
 
-### 🗄️ DATABASE DESIGN
+### DATABASE DESIGN
 
 The project implements a **normalized relational schema** covering:
 
@@ -202,7 +202,7 @@ The database is designed to support:
 
 ---
 
-### ⚙️ AUTOMATION LAYER
+### AUTOMATION LAYER
 
 Python-based ingestion scripts are designed to:
 
@@ -293,7 +293,7 @@ Equity-Depot/
 
 ---
 
-### 🔎 SAMPLE ANALYTICAL CAPABILITIES ENABLED
+### SAMPLE ANALYTICAL CAPABILITIES ENABLED
 
 Once structured, the database supports analytical queries such as:
 
@@ -349,7 +349,7 @@ Upon successful execution, the SQLite database **nse_equity_universe_bronze.db**
 
 ---
 
-### 🧭 DESIGN PHILOSOPHY
+### DESIGN PHILOSOPHY
 
 This project intentionally separates concerns across the analytics stack:
 
@@ -366,7 +366,7 @@ This modular architecture mirrors real-world production systems where:
 
 ---
 
-### 🧩 ENTITY RELATIONSHIP DIAGRAM
+### ENTITY RELATIONSHIP DIAGRAM
 
 The database is structured using a modular relational design where each domain (profile, market metrics, ownership) is separated and linked through a common equity identifier (`symbol`).
 
@@ -381,7 +381,7 @@ This structure enables:
 
 ---
 
-### 🌍 WHY THIS MATTERS
+### WHY THIS MATTERS
 
 Financial analytics systems are only as strong as their underlying data foundations.
 
@@ -403,7 +403,7 @@ This project reflects how financial institutions and analytics teams architect d
 
 ---
 
-### 📌 PROJECT IMPACT
+### PROJECT IMPACT
 
 **This project demonstrates proficiency in:**
 
@@ -414,7 +414,7 @@ This project reflects how financial institutions and analytics teams architect d
 - Modular pipeline architecture
 - Analytics engineering mindset
 
-**🔎 Role Alignment**
+**Role Alignment**
 
 - Data Analyst
 - BI Developer
